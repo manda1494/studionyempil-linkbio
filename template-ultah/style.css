@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #F3E5F5; /* Lilac Muda */
+    --card-bg: #FFFFFF;
+    --accent: #CE93D8; /* Ungu Pastel */
+    --text: #6A1B9A;
+    --btn-color: #F48FB1; /* Pink */
+}
+
+body {
+    background: var(--bg-color);
+    background-image: radial-gradient(#E1BEE7 2px, transparent 2px);
+    background-size: 30px 30px; /* Motif Polkadot */
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text);
+}
+
+.card {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 380px; /* Ukuran HP */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(106, 27, 154, 0.1);
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid white;
+}
+
+/* HEADER */
+.photo-frame {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    background: var(--accent);
+    padding: 5px;
+    border-radius: 50%;
+}
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+.highlight {
+    color: var(--btn-color);
+}
+.intro {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+/* COUNTDOWN */
+.countdown-box {
+    background: #FFF0F5;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 2px dashed var(--btn-color);
+}
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.time {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.time span {
+    font-size: 1.5rem;
+    color: var(--btn-color);
+}
+
+/* DETAILS */
+.details {
+    margin: 30px 0;
+}
+.item {
+    margin-bottom: 20px;
+}
+.item i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+.btn-map {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+/* RSVP */
+.btn-rsvp {
+    display: block;
+    background: var(--btn-color);
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(244, 143, 177, 0.4);
+    transition: transform 0.2s;
+}
+.btn-rsvp:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.7rem;
+    color: #ccc;
+}
+footer a {
+    color: #aaa;
+    text-decoration: none;
+}

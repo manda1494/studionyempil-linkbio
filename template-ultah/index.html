@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Ulang Tahun | Template Studio Nyempil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">
+            <div class="photo-frame">
+                <img src="img/manda.jpg" alt="Foto Birthday Girl">
+            </div>
+            <p class="intro">You are invited to</p>
+            <h1>Amanda's<br><span class="highlight">22th Birthday</span></h1>
+        </div>
+
+        <div class="countdown-box">
+            <p>Menuju Pesta 🎉</p>
+            <div id="countdown">
+                <div class="time"><span id="days">00</span><br>Hari</div>
+                <div class="time"><span id="hours">00</span><br>Jam</div>
+                <div class="time"><span id="minutes">00</span><br>Menit</div>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="item">
+                <i class="far fa-calendar-alt"></i>
+                <p>Senin, 14 September 2026</p>
+            </div>
+            <div class="item">
+                <i class="far fa-clock"></i>
+                <p>15.00 WIB - Selesai</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Rumah Kos<br>Batu IX</p>
+                <a href="#" class="btn-map">Lihat Lokasi</a>
+            </div>
+        </div>
+
+        <div class="rsvp">
+            <p>Kehadiranmu sangat berarti! 💖</p>
+            <a href="https://wa.me/628xxxx?text=Halo+aku+bisa+hadir" class="btn-rsvp">
+                <i class="fab fa-whatsapp"></i> Konfirmasi Kehadiran
+            </a>
+        </div>
+
+        <footer>
+            <p>Template by <a href="../index.html">@studionyempil</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Set tanggal ultah di sini (Tahun, Bulan-1, Tanggal)
+        // Contoh: 20 Desember 2025
+        const birthday = new Date(2026, 9, 14).getTime(); 
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = birthday - now;
+
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<h3>PARTY TIME! 🥳</h3>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
