@@ -1,0 +1,194 @@
+:root {
+    --primary: #88af94; /* Hijau Sage (Elegan) */
+    --secondary: #ffdde1; /* Pink Tipis (Gemes) */
+    --bg: #fdfbf7; /* Cream (Hangat) */
+    --text: #555;
+    --card-bg: #ffffff;
+}
+
+body {
+    background-color: var(--primary);
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); /* Tekstur halus */
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: var(--bg);
+    width: 100%;
+    max-width: 400px; /* Ukuran HP */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+/* DEKORASI BUNGA (Opsional - Bisa pakai CSS Shape) */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 15px;
+    background: var(--primary);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* COVER */
+.cover {
+    padding: 50px 20px 30px;
+    background: linear-gradient(180deg, var(--bg) 0%, #fff 100%);
+}
+
+.top-text {
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.couple-photo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%; /* Bulat */
+    padding: 5px;
+    border: 2px dashed var(--primary); /* Garis putus-putus (Ciri khas Nyempil) */
+}
+
+.couple-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--primary);
+    line-height: 0.9;
+    margin: 20px 0;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+}
+
+.date {
+    background: var(--primary);
+    color: white;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* QUOTES */
+.quotes {
+    padding: 20px 40px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #888;
+}
+.quotes i {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* EVENT CARD */
+.event-card {
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.event-card h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.event-card hr {
+    border: 0;
+    border-top: 1px dashed #ddd;
+    margin: 20px 0;
+}
+
+.btn-loc {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+.btn-loc:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* GIFT BOX */
+.gift-box {
+    margin: 20px;
+    padding: 20px;
+    background: #f0f7f4;
+    border-radius: 15px;
+}
+.bank-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border-left: 5px solid var(--primary);
+}
+.btn-copy {
+    background: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Quicksand';
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+/* RSVP BUTTON */
+.rsvp {
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+    margin-top: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.btn-rsvp {
+    display: block;
+    background: white;
+    color: var(--primary);
+    padding: 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: var(--primary);
+    color: rgba(255,255,255,0.7);
+    padding-bottom: 20px;
+}
+footer a { color: white; text-decoration: none; font-weight: bold; }
