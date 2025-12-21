@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Toko Berkah | Template by Studio Nyempil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Toko Berkah 🍪</div>
+        <a href="https://wa.me/628xxxx" class="btn-chat"><i class="fab fa-whatsapp"></i> Hubungi Kami</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Cemilan Enak <br>Tanpa Pengawet</h1>
+            <p>Dibuat dengan bahan pilihan, resep warisan nenek moyang. Halal & Higienis.</p>
+            <a href="#katalog" class="btn-cta">Lihat Menu</a>
+        </div>
+        <div class="hero-img">
+            <img src="img/1.png" alt="Produk Unggulan">
+        </div>
+    </header>
+
+    <section id="katalog" class="section">
+        <h2>Produk Best Seller 🔥</h2>
+        <div class="product-grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Produk 1">
+                <div class="card-body">
+                    <h3>Cookies Coklat Lumer</h3>
+                    <p class="price">Rp 35.000</p>
+                    <a href="https://wa.me/628xxx?text=Halo+mau+pesan+Cookies" class="btn-beli">Pesan Sekarang</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Produk 2">
+                <div class="card-body">
+                    <h3>Keripik Pisang Madu</h3>
+                    <p class="price">Rp 15.000</p>
+                    <a href="https://wa.me/628xxx?text=Halo+mau+pesan+Keripik" class="btn-beli">Pesan Sekarang</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Produk 3">
+                <div class="card-body">
+                    <h3>Sambal Bawang Pedas</h3>
+                    <p class="price">Rp 25.000</p>
+                    <a href="https://wa.me/628xxx?text=Halo+mau+pesan+Sambal" class="btn-beli">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonial">
+        <h2>Apa Kata Mereka? 💬</h2>
+        <div class="testi-box">
+            <p>"Enak banget cookiesnya! Anak-anak saya suka, pengiriman juga cepet."</p>
+            <span>- Ibu Ani, Jakarta</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>Lokasi: Jl. Mawar No. 10, Bandung</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <small>Template by <a href="../index.html">@studionyempil</a></small>
+    </footer>
+
+    <script>
+        // Ambil elemen hero
+        const heroSection = document.querySelector('.hero');
+
+        // Pasang 'telinga' untuk mendengarkan event scroll
+        window.addEventListener('scroll', function() {
+            // Hitung berapa piksel layar sudah discroll ke bawah
+            let scrollPosition = window.scrollY;
+
+            // LOGIKA TRANSISI:
+            // Semakin jauh discroll, opacity (transparansi) makin kecil.
+            // Kita bagi scrollPosition dengan 400 (kecepatan pudar).
+            // Angka 1 artinya terlihat penuh, mendekati 0 artinya menghilang.
+            let opacityValue = 1 - (scrollPosition / 400);
+
+            // EFEK TAMBAHAN: Geser sedikit ke atas biar makin dramatis
+            let translateValue = scrollPosition / 5;
+
+            // Pastikan opacity tidak minus (minimal 0)
+            if (opacityValue >= 0) {
+                 // Terapkan efeknya ke style hero
+                heroSection.style.opacity = opacityValue;
+                heroSection.style.transform = 'translateY(-' + translateValue + 'px)';
+            }
+        });
+    </script>
+</body>
+</html>
